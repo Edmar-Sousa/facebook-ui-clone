@@ -17,6 +17,7 @@ export const HeaderContainer = styled.header`
     height: 55px;
 
     padding: 0 20px;
+    box-shadow: 0 0 10px rgba(180, 182, 182, 0.6);
 
     background: #fff;
 `

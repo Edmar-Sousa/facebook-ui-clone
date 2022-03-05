@@ -5,11 +5,13 @@ import {
 
 interface PropType {
     children ?: any
+    width ?: string
+    margin ?: string
 }
 
 const RadiusButtonComponent = (props : PropType) => {
     return (
-        <ButtonContainer>
+        <ButtonContainer width={props.width} margin={props.margin}>
             { props.children }
         </ButtonContainer>
     )

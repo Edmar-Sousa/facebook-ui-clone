@@ -1,8 +1,12 @@
 import styled from 'styled-components'
 
 
+interface PropType {
+    padding ?: string
+}
+
 export const ProfileContainer = styled.div`
-    padding: 5px;
+    padding: ${(props : PropType) => props.padding ? props.padding : '5px'};
 
     height: 35px;
 

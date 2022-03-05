@@ -4,12 +4,13 @@ import { ProfileContainer, UserImage, TitleUser } from './style'
 
 interface PropType {
     userName : string
+    padding ?: string
 }
 
 
 const ProfileComponent = (props : PropType) => {
     return (
-        <ProfileContainer>
+        <ProfileContainer padding={ props.padding }>
             <UserImage>
                 <FaUser fontSize={20} color="#515253" />
             </UserImage>
