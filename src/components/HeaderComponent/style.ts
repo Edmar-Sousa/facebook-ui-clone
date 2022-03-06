@@ -16,6 +16,10 @@ export const HeaderContainer = styled.header`
     width: 100%;
     height: 55px;
 
+    position: fixed;
+    top: 0;
+    z-index: 10;
+
     padding: 0 20px;
     box-shadow: 0 0 10px rgba(180, 182, 182, 0.6);
 

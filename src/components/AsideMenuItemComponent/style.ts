@@ -16,6 +16,6 @@ export const MenuItemContainer = styled.div`
     border-bottom-left-radius: 5px;
 
     &:hover {
-        background: RGB(241, 242, 246);
+        background: RGB(0, 242, 246);
     }
 `

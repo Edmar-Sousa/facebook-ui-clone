@@ -3,12 +3,14 @@ import {
     FlexContainer, 
     TitleItem, 
     SpanNotification,
-    MenuSection
+    MenuSection,
+    BlockIcon
 } from './style';
 
 import MenuItemConponent from '../AsideMenuItemComponent'
 import ProfileComponent from '../UserProfileComponent'
 import ButtonRadiusComponent from '../RadiusButton'
+import TitleMenuComponent from '../TitleMenuComponent'
 
 import { FaUserFriends, FaUsers, FaChevronDown } from 'react-icons/fa'
 import { BsDisplay, BsShop } from 'react-icons/bs'
@@ -63,6 +65,64 @@ const AsideComponent = () => {
                     </FlexContainer>
                 </MenuItemConponent>
             </MenuSection>
+
+            <TitleMenuComponent />
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 1</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 2</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 3</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 4</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 5</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 6</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 7</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
+
+            <MenuItemConponent>
+                <FlexContainer align="center">
+                    <BlockIcon />
+                    <TitleItem>Atalho 8</TitleItem>
+                </FlexContainer>
+            </MenuItemConponent>
             
         </AsideMenuContainer>
     )

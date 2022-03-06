@@ -25,6 +25,8 @@ export const UserImage = styled.div`
     width: 30px;
     height: 30px;
 
+    position: relative;
+
     border-radius: 15px;
     margin-right: 5px;
 
@@ -37,4 +39,17 @@ export const UserImage = styled.div`
 
 export const TitleUser = styled.h4`
     font-family: Arial;
+`
+
+export const Online = styled.span`
+    width: 10px;
+    height: 10px;
+
+    position: absolute;
+    bottom: 0;
+    left: 10px;
+
+    border-radius: 5px;
+
+    background: #449658;
 `

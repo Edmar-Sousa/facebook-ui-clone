@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 
 export const AppContainer = styled.div`
+    min-height: 100vh;
     width: 100vw;
-    height: 100vh;
     background: rgb(224, 224, 224);
 `

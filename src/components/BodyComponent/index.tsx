@@ -1,12 +1,22 @@
 
-import { BodyContainer } from './style'
+import { BodyContainer, Body, RightAsideMenu } from './style'
 
-import AsideMenuConponent from '../AsideMenuComponent'
+import AsideMenuComponent from '../AsideMenuComponent'
+import AsideRightMenuComponent from '../AsideRightMenuComponent'
+import StoreComponent from '../StoreComponent'
 
 const BodyComponent = () => {
     return (
         <BodyContainer>
-            <AsideMenuConponent />
+            <AsideMenuComponent />
+
+            <Body>
+                <StoreComponent />
+            </Body>
+            
+            <RightAsideMenu>
+                <AsideRightMenuComponent />
+            </RightAsideMenu>
         </BodyContainer>
     )
 }
