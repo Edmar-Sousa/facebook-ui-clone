@@ -4,6 +4,8 @@ import { BodyContainer, Body, RightAsideMenu } from './style'
 import AsideMenuComponent from '../AsideMenuComponent'
 import AsideRightMenuComponent from '../AsideRightMenuComponent'
 import StoreComponent from '../StoreComponent'
+import NewPostComponent from '../NewPostComponent'
+
 
 const BodyComponent = () => {
     return (
@@ -12,6 +14,7 @@ const BodyComponent = () => {
 
             <Body>
                 <StoreComponent />
+                <NewPostComponent />
             </Body>
             
             <RightAsideMenu>

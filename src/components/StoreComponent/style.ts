@@ -7,7 +7,29 @@ export const StoryContainer = styled.div`
     height: 200px;
     background: #ff0;
 
+    position: relative;
+
     display: flex;
+`
+
+export const ButtonToViewAllStory = styled.a`
+    width: 40px;
+    height: 40px;
+
+    position: absolute;
+
+    z-index: 8;
+    right: -7px;
+    top: 80px;
+    box-shadow: 0 0 5px #9e9fa1ab;
+
+    border-radius: 50%;
+    border: 1px solid #9e9fa1;
+
+    text-align: center;
+    line-height: 45px;
+
+    background: #ffffff;
 `
 
 export const StoryCard = styled.div`

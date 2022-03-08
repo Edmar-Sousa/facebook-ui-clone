@@ -1,5 +1,5 @@
 
-import { BsPlusCircleFill } from 'react-icons/bs'
+import { BsPlusCircleFill, BsArrowRight } from 'react-icons/bs'
 
 import {
     StoryContainer,
@@ -8,12 +8,17 @@ import {
     AddStoryPlusBtn,
     TitleStory,
     UserStory,
-    UserImageContainer
+    UserImageContainer,
+    ButtonToViewAllStory
 } from './style'
 
 const StoreAreaComponent = () => {
     return (
         <StoryContainer>
+            <ButtonToViewAllStory>
+                <BsArrowRight fontSize={20} color="#9e9fa1" />
+            </ButtonToViewAllStory>
+
             <StoryCard>
                 <FooterCard>
                     <AddStoryPlusBtn>
