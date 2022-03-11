@@ -9,7 +9,6 @@ export const StoryContainer = styled.div`
     position: relative;
     display: flex;
 
-    background: #ff0;
     overflow-x: auto;
 
     @media (max-width: 526px) {

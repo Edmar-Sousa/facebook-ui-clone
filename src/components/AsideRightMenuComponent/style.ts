@@ -57,7 +57,7 @@ export const Title = styled.h4`
 
 export const MenuSection = styled.div`
     width: 100%;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid #6e6f73;
 `
 
 export const SubTitle = styled.p`
