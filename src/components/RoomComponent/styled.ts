@@ -76,7 +76,7 @@ export const ButtonScroll = styled.button`
     right: ${(props : ButtonScrollType) => props.right ? props.right : ''};
     left: ${(props : ButtonScrollType) => props.left ? props.left : ''};
 
-    z-index: 10;
+    z-index: 9;
     
     border: none;
     border: 1px solid #828385;

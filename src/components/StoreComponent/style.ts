@@ -5,10 +5,7 @@ export const StoryContainer = styled.div`
     width: 80%;
     margin: auto;
     height: 200px;
-    background: #ff0;
-
     position: relative;
-
     display: flex;
 `
 

@@ -1,8 +1,4 @@
 import { FaFacebook, FaSearch, FaFacebookMessenger, FaBell, FaCaretDown } from 'react-icons/fa'
-import { BsHouseFill, BsDisplay, BsShop } from 'react-icons/bs'
-import { FaUsers } from 'react-icons/fa'
-import { SiFacebookgaming } from 'react-icons/si'
-
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 
 import { 
@@ -14,6 +10,12 @@ import {
 import ButtonComponent from '../ButtonHeader'
 import UserProfileComponent from '../UserProfileComponent'
 import RadiusButtonComponent from '../RadiusButton'
+
+import HomeIcon from '../../icons/HomeIcon'
+import DisplayIcon from '../../icons/DisplayIcon'
+import ShopIcon from '../../icons/ShopIcon'
+import GroupIcon from '../../icons/GroupIcon'
+import GameIcon from '../../icons/GameIcon'
 
 const HeaderComponent = () => {
     return (
@@ -33,23 +35,23 @@ const HeaderComponent = () => {
                 <MenuContainer>
                     <FlexContainer>
                         <ButtonComponent selectedButton={true}>
-                            <BsHouseFill fontSize="25" color="#1a74e4" />
+                            <HomeIcon fill="#1a74e4" stroke="#1a74e4" />
                         </ButtonComponent>
 
                         <ButtonComponent>
-                            <BsDisplay fontSize="25" color="#67686c" />
+                            <DisplayIcon stroke="#67686c" /> 
                         </ButtonComponent>
 
                         <ButtonComponent>
-                            <BsShop fontSize="25" color="#67686c" />
+                            <ShopIcon stroke="#67686c" />
                         </ButtonComponent>
 
                         <ButtonComponent>
-                            <FaUsers fontSize="25" color="#67686c" />
+                            <GroupIcon stroke="#67686c" />
                         </ButtonComponent>
 
                         <ButtonComponent>
-                            <SiFacebookgaming fontSize="25" color="#67686c" />
+                            <GameIcon stroke="#67686c" />
                         </ButtonComponent>
                     </FlexContainer>
                 </MenuContainer>

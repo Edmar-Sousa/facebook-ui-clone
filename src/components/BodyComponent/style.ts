@@ -19,6 +19,4 @@ export const Body = styled.div`
 
     width: 60%;
     margin: auto;
-
-    background: #f00;
 `
