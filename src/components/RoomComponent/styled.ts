@@ -44,6 +44,10 @@ export const CreateRoomButton = styled.button`
     &:hover {
         background: #e5e6eb;
     }
+
+    & svg {
+        margin-right: 5px;
+    }
 `
 
 export const UserRoom = styled.div`

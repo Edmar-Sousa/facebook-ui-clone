@@ -2,31 +2,20 @@ import styled from 'styled-components'
 
 
 export const StoryContainer = styled.div`
+    min-width: 500px;
     width: 80%;
     margin: auto;
     height: 200px;
     position: relative;
     display: flex;
-`
 
-export const ButtonToViewAllStory = styled.a`
-    width: 40px;
-    height: 40px;
+    background: #ff0;
+    overflow-x: auto;
 
-    position: absolute;
-
-    z-index: 8;
-    right: -7px;
-    top: 80px;
-    box-shadow: 0 0 5px #9e9fa1ab;
-
-    border-radius: 50%;
-    border: 1px solid #9e9fa1;
-
-    text-align: center;
-    line-height: 45px;
-
-    background: #ffffff;
+    @media (max-width: 526px) {
+        min-width: 0;
+        width: 100%;
+    }
 `
 
 export const StoryCard = styled.div`

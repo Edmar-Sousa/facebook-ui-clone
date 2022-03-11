@@ -4,16 +4,22 @@ import {
     TitleItem, 
     SpanNotification,
     MenuSection,
-    BlockIcon
+    BlockIcon,
+    ImageIcon
 } from './style';
 
-import MenuItemConponent from '../AsideMenuItemComponent'
-import ProfileComponent from '../UserProfileComponent'
+import MenuItemConponent     from '../AsideMenuItemComponent'
+import ProfileComponent      from '../UserProfileComponent'
 import ButtonRadiusComponent from '../RadiusButton'
-import TitleMenuComponent from '../TitleMenuComponent'
+import TitleMenuComponent    from '../TitleMenuComponent'
 
-import { FaUserFriends, FaUsers, FaChevronDown } from 'react-icons/fa'
-import { BsDisplay, BsShop } from 'react-icons/bs'
+import { FaChevronDown } from 'react-icons/fa'
+
+import FriendsImage     from '../../assets/friends.png'
+import WatchImage       from '../../assets/watch.png'
+import GroupImage       from '../../assets/group.png'
+import MarketplaceImage from '../../assets/marketplace.png'
+import MemoriesImage    from '../../assets/memories.png'
 
 const AsideComponent = () => {
     return (
@@ -26,16 +32,21 @@ const AsideComponent = () => {
 
                 <MenuItemConponent>
                     <FlexContainer>
-                        <FaUserFriends fontSize={25} />
+                        <span>
+                            <ImageIcon src={FriendsImage} />
+                        </span>
+
                         <TitleItem>Amigos</TitleItem>
                     </FlexContainer>
                 </MenuItemConponent>
 
                 <MenuItemConponent>
                     <FlexContainer>
-                        <BsDisplay fontSize={25} />
+                        <span>
+                            <ImageIcon src={WatchImage} />
+                        </span>
 
-                        <FlexContainer flexDirection="column">
+                        <FlexContainer flexDirection="column" align="left">
                             <TitleItem>Watch</TitleItem>
                             <SpanNotification>9 novos vídeos</SpanNotification>
                         </FlexContainer>
@@ -44,15 +55,31 @@ const AsideComponent = () => {
 
                 <MenuItemConponent>
                     <FlexContainer>
-                        <FaUsers fontSize={25} />
+                        <span>
+                            <ImageIcon src={GroupImage} />
+                        </span>
+
                         <TitleItem>Grupos</TitleItem>
                     </FlexContainer>
                 </MenuItemConponent>
 
                 <MenuItemConponent>
                     <FlexContainer>
-                        <BsShop fontSize={25} />
+                        <span>
+                            <ImageIcon src={MarketplaceImage} />
+                        </span>
+
                         <TitleItem>Marketplace</TitleItem>
+                    </FlexContainer>
+                </MenuItemConponent>
+
+                <MenuItemConponent>
+                    <FlexContainer>
+                        <span>
+                            <ImageIcon src={MemoriesImage} />
+                        </span>
+
+                        <TitleItem>Lembranças</TitleItem>
                     </FlexContainer>
                 </MenuItemConponent>
 

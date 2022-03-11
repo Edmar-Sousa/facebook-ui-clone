@@ -39,6 +39,14 @@ export const MenuContainer = styled.aside`
     & span {
         margin: 0 10px;
     }
+
+    @media (max-width: 954px) {
+        width: 30%;
+    }
+
+    @media (max-width: 754px) {
+        display: none;
+    }
 `
 
 export const Title = styled.h4`

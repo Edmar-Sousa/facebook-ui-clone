@@ -27,7 +27,8 @@ export const HeaderContainer = styled.header`
 `
 
 export const SearchContainer = styled.div`
-    width: 250px;
+    min-width: 40px;
+    max-width: 250px;
     height: 40px;
 
     padding: 0 10px;
@@ -47,8 +48,49 @@ export const InputSearch = styled.input`
     background: none;
     border: none;
     outline: none;
+
+    @media (max-width: 1190px) {
+        display: none;
+    }
 `
 
 export const MenuContainer = styled.nav`
     height: 100%;
+`
+
+export const CenterMenu = styled.div`
+    height: 100%;
+
+    @media (max-width: 754px) {
+        display: none;
+    }
+`
+
+export const HiddenButonMaxWidth = styled.div`
+    height: 100%;
+
+    @media(max-width: 980px) {
+        display: none;
+    }
+`
+
+export const BarButton = styled.button`
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 7px 20px;
+
+    border-radius: 20px;
+    border: none;
+    background: RGB(241, 242, 246);
+
+    display: none;
+
+    @media(max-width: 980px) {
+        display: block;
+    }
 `

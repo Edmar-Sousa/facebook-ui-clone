@@ -57,6 +57,8 @@ export const PostInfos = styled.div`
 export const Paragraph = styled.p`
     font-family: Arial;
     color: #6d717d;
+
+    font-size: 15px;
 `
 
 export const ButtonContainer = styled.div`

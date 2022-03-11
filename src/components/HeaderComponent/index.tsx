@@ -1,28 +1,35 @@
-import { FaFacebook, FaSearch, FaFacebookMessenger, FaBell, FaCaretDown } from 'react-icons/fa'
+import { FaBars, FaSearch, FaFacebookMessenger, FaBell, FaCaretDown } from 'react-icons/fa'
 import { BsFillGrid3X3GapFill } from 'react-icons/bs'
 
 import { 
-    HeaderContainer, SearchContainer, FlexContainer, InputSearch,
-    MenuContainer
+    HeaderContainer,
+    SearchContainer, 
+    FlexContainer, 
+    InputSearch,
+    MenuContainer,
+    HiddenButonMaxWidth,
+    BarButton,
+    CenterMenu
 } from './style'
 
 
-import ButtonComponent from '../ButtonHeader'
-import UserProfileComponent from '../UserProfileComponent'
+import ButtonComponent       from '../ButtonHeader'
+import UserProfileComponent  from '../UserProfileComponent'
 import RadiusButtonComponent from '../RadiusButton'
 
-import HomeIcon from '../../icons/HomeIcon'
-import DisplayIcon from '../../icons/DisplayIcon'
-import ShopIcon from '../../icons/ShopIcon'
-import GroupIcon from '../../icons/GroupIcon'
-import GameIcon from '../../icons/GameIcon'
+import HomeIcon     from '../../icons/HomeIcon'
+import DisplayIcon  from '../../icons/DisplayIcon'
+import ShopIcon     from '../../icons/ShopIcon'
+import GroupIcon    from '../../icons/GroupIcon'
+import GameIcon     from '../../icons/GameIcon'
+import FacebookIcon from '../../icons/FacebookIcon'
 
 const HeaderComponent = () => {
     return (
         <HeaderContainer>
             <FlexContainer justify="space-between">
                 <FlexContainer>
-                    <FaFacebook fontSize="40" color="#129cf7" />
+                    <FacebookIcon />
 
                     <SearchContainer>
                         <FlexContainer>
@@ -32,7 +39,7 @@ const HeaderComponent = () => {
                     </SearchContainer>
                 </FlexContainer>
 
-                <MenuContainer>
+                <CenterMenu>
                     <FlexContainer>
                         <ButtonComponent selectedButton={true}>
                             <HomeIcon fill="#1a74e4" stroke="#1a74e4" />
@@ -54,28 +61,34 @@ const HeaderComponent = () => {
                             <GameIcon stroke="#67686c" />
                         </ButtonComponent>
                     </FlexContainer>
-                </MenuContainer>
+                </CenterMenu>
 
                 <MenuContainer>
-                    <FlexContainer>
-                        <UserProfileComponent userName="Edinho" />
+                    <HiddenButonMaxWidth>
+                        <FlexContainer>
+                            <UserProfileComponent userName="Edinho" hoverColor="rgba(32, 32, 32, 0.1)" />
 
-                        <RadiusButtonComponent>
-                            <BsFillGrid3X3GapFill fontSize={20} />
-                        </RadiusButtonComponent>
+                            <RadiusButtonComponent>
+                                <BsFillGrid3X3GapFill fontSize={20} />
+                            </RadiusButtonComponent>
 
-                        <RadiusButtonComponent>
-                            <FaFacebookMessenger fontSize={20} />
-                        </RadiusButtonComponent>
+                            <RadiusButtonComponent>
+                                <FaFacebookMessenger fontSize={20} />
+                            </RadiusButtonComponent>
 
-                        <RadiusButtonComponent>
-                            <FaBell fontSize={20} />
-                        </RadiusButtonComponent>
+                            <RadiusButtonComponent>
+                                <FaBell fontSize={20} />
+                            </RadiusButtonComponent>
 
-                        <RadiusButtonComponent>
-                            <FaCaretDown fontSize={20} />
-                        </RadiusButtonComponent>
-                    </FlexContainer>
+                            <RadiusButtonComponent>
+                                <FaCaretDown fontSize={20} />
+                            </RadiusButtonComponent>
+                        </FlexContainer>
+                    </HiddenButonMaxWidth>
+
+                    <BarButton>
+                        <FaBars fontSize={25} />
+                    </BarButton>
                 </MenuContainer>
             </FlexContainer>
         </HeaderContainer>

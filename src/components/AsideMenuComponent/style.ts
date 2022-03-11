@@ -18,6 +18,10 @@ export const AsideMenuContainer = styled.aside`
     padding-top: 15px;
     padding-left: 10px;
 
+    @media (max-width: 1024px) {
+        display: none;
+    }
+
     &:hover {
         overflow-y: scroll;
     }
@@ -40,13 +44,13 @@ export const AsideMenuContainer = styled.aside`
 
 interface PropType {
     flexDirection ?: 'column' | 'row'
-    align ?: 'center'
+    align ?: 'center' | 'left'
 }
 
 export const FlexContainer = styled.div`
     display: flex;
 
-    align-items: ${(porps : PropType) => porps.align ? porps.align : ''};
+    align-items: ${(porps : PropType) => porps.align ? porps.align : 'center'};
     flex-direction: ${(props : PropType) => props.flexDirection ? props.flexDirection : ''};
 `
 
@@ -73,4 +77,8 @@ export const BlockIcon = styled.div`
     border-radius: 5px;
 
     background: #000;
+`
+
+export const ImageIcon = styled.img`
+    width: 28px;
 `

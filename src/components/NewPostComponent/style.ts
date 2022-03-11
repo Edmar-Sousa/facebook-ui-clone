@@ -59,6 +59,12 @@ export const PostTypes = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @media (max-width: 500px) {
+        button:last-child {
+            display: none;
+        }
+    }
 `
 
 export const ButtonPostType = styled.button`
@@ -77,5 +83,9 @@ export const ButtonPostType = styled.button`
 
     &:hover {
         background: #dedfe0;
+    }
+
+    & svg {
+        margin-right: 5px;
     }
 `

@@ -1,6 +1,4 @@
 
-import { HiVideoCamera } from 'react-icons/hi'
-import { ImFilePicture } from 'react-icons/im'
 import { BiHappyAlt } from 'react-icons/bi'
 
 import {
@@ -12,6 +10,10 @@ import {
     ButtonPostType
 } from './style'
 
+
+import CreateCameraIcon from '../../icons/CameraCreateIcon'
+import PictureIcon      from '../../icons/PictureIcon'
+
 const NewPostComponent = () => {
     return (
         <NewPostContainer>
@@ -22,11 +24,11 @@ const NewPostComponent = () => {
 
             <PostTypes>
                 <ButtonPostType>
-                    <HiVideoCamera fontSize={25} color="#ea465f" /> Vídeo ao vivo
+                    <CreateCameraIcon /> Vídeo ao vivo
                 </ButtonPostType>
 
                 <ButtonPostType>
-                    <ImFilePicture fontSize={20} color="#45bd63" /> Foto/vídeo
+                    <PictureIcon /> Foto/vídeo
                 </ButtonPostType>
 
                 <ButtonPostType>

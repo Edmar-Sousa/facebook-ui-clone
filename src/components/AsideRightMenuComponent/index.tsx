@@ -1,5 +1,4 @@
 
-import { HiOutlineVideoCamera } from 'react-icons/hi'
 import { FaSearch, FaEllipsisH, FaPlus } from 'react-icons/fa'
 
 import { 
@@ -11,8 +10,11 @@ import {
 } from './style'
 
 import AsideMenuItemComponent from '../AsideMenuItemComponent'
-import UserProfileComponent from '../UserProfileComponent'
-import RadiusButton from '../RadiusButton'
+import UserProfileComponent   from '../UserProfileComponent'
+import RadiusButton           from '../RadiusButton'
+
+
+import CameraWithIcon from '../../icons/CameraWithPlusIcon'
 
 const AsideRightMenuComponent = () => {
     return (
@@ -22,7 +24,7 @@ const AsideRightMenuComponent = () => {
 
                 <FlexContainer>
                     <span>
-                        <HiOutlineVideoCamera fontSize={20} />
+                        <CameraWithIcon fill="#66676b" />
                     </span>
 
                     <span>
@@ -41,47 +43,47 @@ const AsideRightMenuComponent = () => {
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
 
                 <AsideMenuItemComponent>
-                    <UserProfileComponent userName="Usuario 1" />
+                    <UserProfileComponent userName="Usuario 1" isOnline={true} />
                 </AsideMenuItemComponent>
             </MenuSection>
 

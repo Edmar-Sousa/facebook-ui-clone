@@ -1,6 +1,5 @@
 import { useState } from 'react'
 
-import { HiVideoCamera } from 'react-icons/hi'
 import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai'
 
 
@@ -13,6 +12,8 @@ import {
     ButtonScroll,
 } from './styled'
 
+import CameraWithIcon from '../../icons/CameraWithPlusIcon'
+
 interface ArrayElementType {
     id  : string
     ref : HTMLElement
@@ -23,18 +24,30 @@ interface showOrHiddenButtonsType {
     rightButton: boolean
 }
 
+
 const RoomComponent = () => {
     let arrayRefsToElements = Array<ArrayElementType>()
 
     const [scrollValue, setScrollValue] = useState<number>(0)
     const [showOrHiddenButtons, setShowOrHiddenButtons] = useState<showOrHiddenButtonsType>({ leftButton:false, rightButton:true })
 
-    function getRefOfElementFromId(id : string) : (HTMLElement | null)[] {
-        return arrayRefsToElements.map((element : ArrayElementType) => element.id == id ? element.ref : null)
+    /**
+     * @description this function return the first elements or null with id received
+     * @param id 
+     */
+    function getRefOfElementFromId(id : string) : HTMLElement | null {
+        const arrayOfElements = arrayRefsToElements.map((element : ArrayElementType) => element.id == id ? element.ref : null)
+        return arrayOfElements[arrayOfElements.length - 1]
     }
 
 
-    function getRefToContainerElement(element : HTMLElement | null) {
+    /**
+     * @description this function get a reference of element and 
+     * push reference to 'arrayRefsToElements'
+     * 
+     * @param element<HTMLElement | null>
+     */
+    function getRefToElement(element : HTMLElement | null) {
         const idElement = element?.getAttribute('id')
 
         if (typeof idElement === 'string' &&  element != null) {
@@ -48,11 +61,19 @@ const RoomComponent = () => {
     }
 
 
+    /**
+     * @description this function recive an element with scroll and 
+     * show or hidden buttons to apply scroll
+     * 
+     * @param element<HTMLElement> 
+     */
     function hiddenOrShowButtons(element : HTMLElement) {
+        const maxScrollToHiddenButton = element.scrollWidth - element.clientWidth
+
         if (element.scrollLeft <= 0)
             setShowOrHiddenButtons({ leftButton: false, rightButton: true })
-            
-        else if (element.scrollLeft >= (element.scrollWidth - element.clientWidth))
+        
+        else if (element.scrollLeft >= maxScrollToHiddenButton)
             setShowOrHiddenButtons({ leftButton: true, rightButton: false })
         
         else 
@@ -60,20 +81,27 @@ const RoomComponent = () => {
     }
 
 
+    /**
+     * @description this function is call when the user click in right or left button,
+     *  then a function determine the a direction of scroll and apply scroll. 
+     *  And finally call the function showOrHiddenButtons.
+     * 
+     * @param event<React.MouseEvent>
+     */
     function applyScrollTo(event : React.MouseEvent) {
         const htmlElement = event.target as HTMLElement
         const idElement   = htmlElement.getAttribute('id')
 
-        if (idElement != null){ 
-            const scrollXValue = idElement === 'rightButton' ? 300 : -300
-            let valueToApplyInScroll = scrollValue + scrollXValue
-            const arrayElements = getRefOfElementFromId('roomContainer')
+        const VALUE_TO_APLLY_IN_SCROLL = 300
 
-            const refToContainerScroll = arrayElements[arrayElements.length - 1]
+        if (idElement != null){ 
+            const scrollXValue = idElement === 'rightButton' ? VALUE_TO_APLLY_IN_SCROLL : -VALUE_TO_APLLY_IN_SCROLL
+            const refToContainerScroll = getRefOfElementFromId('roomContainer')
 
             if (refToContainerScroll != null) {
                 const maxScrollX = refToContainerScroll?.scrollWidth - refToContainerScroll?.clientWidth
 
+                let valueToApplyInScroll = scrollValue + scrollXValue
                 if (valueToApplyInScroll <= 0)
                     valueToApplyInScroll = 0
                 
@@ -96,9 +124,8 @@ const RoomComponent = () => {
             <ButtonScroll 
                 right="10px" 
                 id="rightButton"
-                onClick={ applyScrollTo } ref={ getRefToContainerElement }
-            >
-                <AiOutlineRight fontSize={20} pointerEvents="none" />
+                onClick={ applyScrollTo } ref={ getRefToElement } >
+                    <AiOutlineRight fontSize={20} pointerEvents="none" />
             </ButtonScroll>
         )
     }
@@ -108,9 +135,8 @@ const RoomComponent = () => {
             <ButtonScroll 
                 left="10px" 
                 id="leftButton"
-                onClick={ applyScrollTo } ref={ getRefToContainerElement }
-            >
-                <AiOutlineLeft fontSize={20} pointerEvents="none" />
+                onClick={ applyScrollTo } ref={ getRefToElement }>
+                    <AiOutlineLeft fontSize={20} pointerEvents="none" />
             </ButtonScroll>
         )
     }
@@ -121,9 +147,9 @@ const RoomComponent = () => {
             { showOrHiddenButtons?.leftButton  ? buildButtonLeft()  : null }
             
 
-            <RoomContainer ref={ getRefToContainerElement } id="roomContainer">
+            <RoomContainer ref={ getRefToElement } id="roomContainer">
                 <CreateRoomButton>
-                    <HiVideoCamera fontSize={25} color="#ea465f" /> Criar sala
+                    <CameraWithIcon size="20px" /> Criar sala
                 </CreateRoomButton>
 
                 <RoomList>

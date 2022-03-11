@@ -9,65 +9,70 @@ import {
     TitleStory,
     UserStory,
     UserImageContainer,
-    ButtonToViewAllStory
 } from './style'
 
 const StoreAreaComponent = () => {
     return (
         <StoryContainer>
-            <ButtonToViewAllStory>
-                <BsArrowRight fontSize={20} color="#9e9fa1" />
-            </ButtonToViewAllStory>
+            <span>
+                <StoryCard>
+                    <FooterCard>
+                        <AddStoryPlusBtn>
+                            <BsPlusCircleFill fontSize={34} color="#1c75eb" />
+                        </AddStoryPlusBtn>
 
-            <StoryCard>
-                <FooterCard>
-                    <AddStoryPlusBtn>
-                        <BsPlusCircleFill fontSize={34} color="#1c75eb" />
-                    </AddStoryPlusBtn>
+                        <TitleStory textAlign="center">Criar story</TitleStory>
+                    </FooterCard>
+                </StoryCard>
+            </span>
 
-                    <TitleStory textAlign="center">Criar story</TitleStory>
-                </FooterCard>
-            </StoryCard>
+            <span>
+                <StoryCard>
+                    <UserStory>
+                        <UserImageContainer />
+                    </UserStory>
 
-            <StoryCard>
-                <UserStory>
-                    <UserImageContainer />
-                </UserStory>
+                    <FooterCard FillBg='#0000'>
+                        <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
+                    </FooterCard>
+                </StoryCard>
+            </span>
 
-                <FooterCard FillBg='#0000'>
-                    <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
-                </FooterCard>
-            </StoryCard>
+            <span>
+                <StoryCard>
+                    <UserStory>
+                        <UserImageContainer />
+                    </UserStory>
 
-            <StoryCard>
-                <UserStory>
-                    <UserImageContainer />
-                </UserStory>
+                    <FooterCard FillBg='#0000'>
+                        <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
+                    </FooterCard>
+                </StoryCard>
+            </span>
 
-                <FooterCard FillBg='#0000'>
-                    <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
-                </FooterCard>
-            </StoryCard>
+            <span>
+                <StoryCard>
+                    <UserStory>
+                        <UserImageContainer />
+                    </UserStory>
 
-            <StoryCard>
-                <UserStory>
-                    <UserImageContainer />
-                </UserStory>
+                    <FooterCard FillBg='#0000'>
+                        <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
+                    </FooterCard>
+                </StoryCard>
+            </span>
 
-                <FooterCard FillBg='#0000'>
-                    <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
-                </FooterCard>
-            </StoryCard>
+            <span>
+                <StoryCard>
+                    <UserStory>
+                        <UserImageContainer />
+                    </UserStory>
 
-            <StoryCard>
-                <UserStory>
-                    <UserImageContainer />
-                </UserStory>
-
-                <FooterCard FillBg='#0000'>
-                    <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
-                </FooterCard>
-            </StoryCard>
+                    <FooterCard FillBg='#0000'>
+                        <TitleStory textAlign="left" color="#fff">Criar story</TitleStory>
+                    </FooterCard>
+                </StoryCard>
+            </span>
         </StoryContainer>
     )
 }

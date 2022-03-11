@@ -3,10 +3,11 @@ import styled from 'styled-components'
 
 interface PropType {
     padding ?: string
+    hoverColor ?: string
 }
 
 export const ProfileContainer = styled.div`
-    padding: ${(props : PropType) => props.padding ? props.padding : '5px'};
+    padding: ${(props : PropType) => props.padding || '5px'};
 
     height: 35px;
 
@@ -17,7 +18,7 @@ export const ProfileContainer = styled.div`
     cursor: pointer;
 
     &:hover {
-        background: RGB(241, 242, 246);
+        background: ${(props : PropType) => props.hoverColor || ''};
     }
 `
 
