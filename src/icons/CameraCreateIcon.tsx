@@ -1,7 +1,7 @@
 const CameraCreateIcon = () => {
     return (
         <svg viewBox="0 0 24 24" width="24px" height="24px">
-            <g fill-rule="evenodd" transform="translate(-444 -156)">
+            <g fillRule="evenodd" transform="translate(-444 -156)">
                 <g>
                     <path 
                         fill="#f3425f"

@@ -3,8 +3,8 @@ const FacebookIcon = () => {
         <svg viewBox="0 0 36 36" fill="url(#jsc_s_z)" height="40" width="40">
             <defs>
                 <linearGradient x1="50%" x2="50%" y1="97.0782153%" y2="0%" id="jsc_s_z">
-                <stop offset="0%" stop-color="#0062E0"></stop>
-                <stop offset="100%" stop-color="#19AFFF"></stop>
+                <stop offset="0%" stopColor="#0062E0"></stop>
+                <stop offset="100%" stopColor="#19AFFF"></stop>
                 </linearGradient>
             </defs>
             <path 

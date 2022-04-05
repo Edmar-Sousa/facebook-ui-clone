@@ -2,9 +2,12 @@ import styled from 'styled-components'
 
 
 export const BodyContainer = styled.main`
+    position: relative;
     padding-top: 55px;
 
+    max-width: 1200px;
     width: 100%;
+    margin: auto;
     height: calc(100% - 55px);
 `
 
@@ -23,7 +26,6 @@ export const Body = styled.div`
     @media (max-width: 1024px) {
         margin: initial;
         width: 80%;
-        background: #ff0;
     }
 
     @media (max-width: 954px) {
